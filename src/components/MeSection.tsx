@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Linkedin, Github, Instagram } from "lucide-react";
+import { useState } from "react";
 
 export const MeSection = () => {
+
+  const [hovered, setHovered] = useState(false)
  
   const socials = [
     {
@@ -104,7 +107,7 @@ export const MeSection = () => {
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "none",
-          color: "rgb(2, 198, 2)"
+          color: "rgba(39, 194, 88, 1)"
          }}
       >
         danhcv.alves@gmail.com
@@ -130,23 +133,23 @@ export const MeSection = () => {
             key={name}
             href={url}
             whileHover={{
-              color: "rgb(2, 198, 2)",
-              borderColor: "rgb(2, 198, 2)"
+              color: "rgba(39, 194, 88, 1)",
+              borderColor: "rgba(39, 194, 88, 1)"
             }}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={name}
             style={{ 
-              border: "solid 1px white",
+              border: "solid 1px rgb(133, 133, 140)",
               padding: "10px",
               borderRadius: "100%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "white",
+              color: "rgb(133, 133, 140)",
              }}
           >
-            <Icon size={18} />
+            <Icon size={18} style={{color: "inherit"}}/>
           </motion.a>
         ))}
       </motion.div>
